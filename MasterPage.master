@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div class="main">
+            <div class="left">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-dashboard"></i>Dashborard</a>
+                    </li>
+                    <li>
+                        <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+                            <asp:ListItem>select page</asp:ListItem>
+                            <asp:ListItem>a_subcategoryshow.aspx</asp:ListItem>
+                            <asp:ListItem>adminshowcategory.aspx</asp:ListItem>
+                            <asp:ListItem>admintcshow.aspx</asp:ListItem>
+                        </asp:DropDownList>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="header">
+                    <div class="hdiv">
+                        <ul class="lh">
+                            <li>
+                                <input type="text" name="search" placeholder="  Searchfor.." class="inp" />
+                            </li>
+                            <li>
+                                <button type="button" class="bt"><i class="fa fa-search"></i></button>
+                            </li>
+                            <div class="clr"></div>
+
+
+                        </ul>
+                        <ul class="rh">
+                            <li><i class="fa fa-envelope" style="color: rgb(213,213,225)"><sup><span style="background-color: rgb(227,72,52);">3+</span></sup></i></li>
+                            <li><i class="fa fa-bell" style="color: rgb(213,213,225)"><sup><span style="background-color: rgb(227,72,52);">3+</span></sup></i></li>
+                            <div class="clr"></div>
+                        </ul>
+
+                        <div class="clr"></div>
+
+                    </div>
+                    <div class="h2div">
+                        Keshwani Jitesh&nbsp;<i class="fa fa-pencil"></i>
+                    </div>
+
+                    <div class="clr"></div>
+                </div>
+                <div class="content">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+                </div>
+                <div class="footer">
+                    copyright &copy; your website 2020
+                </div>
+                <br />
+            </div>
+            <div class="clr"></div>
+        </div>
+    </form>
+</body>
+</html>
